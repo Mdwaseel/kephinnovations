@@ -141,7 +141,7 @@ body{
   /* For devices with screens from 376px up to 414px wide */
   @media only screen and (min-width: 376px) and (max-width: 414px) {
     body {
-        background-image: url(imgs/mobile\ screen.png);
+        background-image: url(imgs/mobilescreen.png);
         background-size: 101vw 171vh;
         background-position: fixed;
     }
@@ -156,7 +156,7 @@ body{
   /* For devices with screens from 415px up to 768px wide */
   @media only screen and (min-width: 415px)  and (max-width: 768px) {
     body {
-        background-image: url(imgs/mobile\ screen.png);
+        background-image: url(imgs/mobilescreen.png);
         background-size: 103vw 171vh;
         background-position: fixed;
     }
@@ -188,7 +188,7 @@ body{
         height: 320px;
     }
     body {
-        background-image: url(imgs/mobile\ screen.png);
+        background-image: url(imgs/mobilescreen.png);
         background-size: 103vw 171vh;
         background-position: fixed;
     }
