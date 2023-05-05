@@ -1,0 +1,196 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(/imgs/mobile\ screen.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-size: 103vw 171vh;
+}
+
+
+.container {
+    width: 23%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  background: rgb(245,245,245,95%);
+    border-radius: 8px;
+ 
+    
+    /* border: 2px solid black; */
+    margin:auto;
+    height: 23vw;
+    position: relative;
+    /* Add position: relative to the container */
+    top: 11vw;
+
+    
+}
+
+.container:hover {
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    }
+
+.logo {
+    margin: 22px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.logo img {
+    width: 50%;
+    margin: auto;
+}
+
+.form label {
+    
+    display: block;
+    margin-bottom: 1px;
+    font-weight: bold;
+}
+
+.form input[type="text"],
+.form input[type="password"] {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 4px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form button {
+    padding: 10px;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    /* Add position: absolute */
+    background-color: #4CAF50;
+    bottom: 18px;
+    /* Add a fixed bottom value to keep the button in place */
+    left: 50%;
+    /* Add left: 50% to horizontally center the button */
+    transform: translateX(-50%);
+    /* Add transform to center the button horizontally */
+}
+
+
+
+.form button:hover {
+    background-color: #3e8e41;
+}
+
+/* @media (max-width: 600px) {
+    .container {
+      width: 64%;
+      
+      top: 8vw;
+      height: 74vw;
+      
+    }
+    body {
+        background-image: url(/imgs/mobile\ screen.jpg);
+        background-size: 103vw 166vh;
+        background-position: fixed;
+        /* Set the background size to full page width and height /
+        / Set the background position to fixed to prevent scrolling */
+        /* }
+  }
+   */
+  /* For screens between 600px and 1200px */
+  /* @media (min-width: 600px) and (max-width: 1200px) {
+    .container {
+        width: 25%;
+        /* height: auto; */
+        /* top: 24vw;
+        height: 26vw; */
+    /* }
+  }  */
+
+  /* For devices with screens up to 320px wide */
+@media only screen and (max-width: 320px) {
+    .container {
+        width: 76%;
+        top: 63vw;
+        height: 91vw;
+    }
+    body{
+        background-size: 103vw 173vh;
+    }
+  }
+  
+  /* For devices with screens from 321px up to 375px wide */
+  @media only screen and (min-width: 321px) and (max-width: 375px) {
+    body{
+        background-size: 103vw 173vh;
+    }
+    .container {
+        width: 72%;
+        top: 14.1rem;
+        height: 92vw;
+    }
+  }
+  
+  /* For devices with screens from 376px up to 414px wide */
+  @media only screen and (min-width: 376px) and (max-width: 414px) {
+    body {
+        background-image: url(/imgs/mobile\ screen.png);
+        background-size: 101vw 171vh;
+        background-position: fixed;
+    }
+    .container {
+        width: 68%;
+        top: 14.1rem;
+        height: 79vw;
+    }
+  }
+  
+  
+  /* For devices with screens from 415px up to 768px wide */
+  @media only screen and (min-width: 415px)  and (max-width: 768px) {
+    body {
+        background-image: url(/imgs/mobile\ screen.png);
+        background-size: 103vw 171vh;
+        background-position: fixed;
+    }
+    .container {
+        width: 60%;
+        top: 15rem;
+        height: 20rem;
+    }
+  }
+  
+  
+  /* For devices with screens from 769px up to 1024px wide */
+  @media only screen and (min-width: 769px) and (max-width: 1024px) {
+    body{
+    background-size: 101vw 171vh;
+    }
+    .container{
+    width: 40%;
+    height: 331px;
+    top: 26vw;
+    }
+    }
+  
+  /* For devices with screens from 1025px up to 1440px wide */
+  @media only screen and (min-width: 1025px) and (max-width: 1440px) {
+    .container{
+        width: 30%;
+        top: 12vw;
+        height: 320px;
+    }
+    body {
+        background-image: url(/imgs/mobile\ screen.png);
+        background-size: 103vw 171vh;
+        background-position: fixed;
+    }
+  }
+  
