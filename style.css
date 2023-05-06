@@ -1,3 +1,8 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
 .sidenav {
   height: 100%;
   width: 181px;
@@ -34,6 +39,20 @@
   background-color: rgb(241, 241, 241);
   border-radius: 6px;
   border-left: 6px solid #6681d8;
+}
+.logo img{
+  width: 89%;
+    position: absolute;
+    top: 4%;
+    left: 6%;
+}
+
+#active{
+  color: #000801;
+  background-color: rgb(241, 241, 241);
+  border-radius: 6px;
+  border-left: 6px solid #6681d8;
+
 }
 
 .main {
@@ -112,7 +131,7 @@ font-size: 16px;
 
 }
 #line-chart {
-  width: 96.6%;
+  width: 96.5%;
 
   margin: 10px auto;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
