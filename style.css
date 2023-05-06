@@ -1,3 +1,36 @@
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(97, 96, 96);
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #fcfcfc;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 200px;
+  /* Same as the width of the sidenav */
+  font-size: 28px;
+  /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+
 .chart-container {
   display: flex;
   flex-wrap: wrap;
@@ -65,8 +98,8 @@ font-size: 16px;
 
 }
 #line-chart {
-  width: 96.1%;
-  height:122px;
+  width: 96.6%;
+
   margin: 10px auto;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   border: 1px solid rgb(187, 183, 183);
