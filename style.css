@@ -1,28 +1,96 @@
 .chart-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.chart {
+  width: 30%;
+  padding: 10px;
+  height: 160px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgb(187, 183, 183);
+  margin: 3px;
+  font-size: 12px;
+}
+
+
+#chart1::before {
+content: "Temperature";
+position: absolute;
+top: 10px;
+left: 11px;
+font-size: 16px;
+/* font-weight: bold; */
+}
+#chart2::before {
+content: "pH";
+position: absolute;
+top: 10px;
+left: 11px;
+font-size: 16px;
+/* font-weight: bold; */
+}
+#chart3::before {
+content: "EC";
+position: absolute;
+top: 10px;
+left: 11px;
+font-size: 16px;
+/* font-weight: bold; */
+}
+#chart4::before {
+content: "TDS";
+position: absolute;
+top: 10px;
+left: 11px;
+font-size: 16px;
+/* font-weight: bold; */
+}
+#chart5::before {
+content: "Turbidity";
+position: absolute;
+top: 10px;
+left: 11px;
+font-size: 16px;
+/* font-weight: bold; */
+}
+#chart6::before {
+content: "DO";
+position: absolute;
+top: 10px;
+left: 11px;
+font-size: 16px;
+/* fohnt-weigt: bold; */
+
+}
+#line-chart {
+  width: 96.1%;
+  height:122px;
+  margin: 10px auto;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgb(187, 183, 183);
+
+background-color: #ffffff;
+}
+
+
+
+@media (max-width: 768px) {
   .chart {
-    width: 30%;
-    padding: 10px;
-    height: auto;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    border: 1px solid rgb(187, 183, 183);
-    margin: 3px;
-    font-size: 12px;
+    width: 50%;
   }
-  
-  @media (max-width: 768px) {
-    .chart {
-      width: 50%;
-    }
+}
+
+@media (max-width: 576px) {
+  .chart {
+    width: 100%;
   }
-  
-  @media (max-width: 576px) {
-    .chart {
-      width: 100%;
-    }
-  }
-  
+}
+
+.chart-container1 {
+  width: 80%;
+  margin: 0 auto;
+}
+
+
