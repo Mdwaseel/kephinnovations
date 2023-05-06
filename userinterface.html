@@ -10,10 +10,13 @@
 </head>
 <body>
     <div class="sidenav">
-        <a href="#">Monitoring</a>
+        <li>
+               <a href="#">Monitoring</a>
         <a href="#">Controlling</a>
-        <a href="#">Notification</a>
-      </div>
+        <a href="#">Notifications</a>
+      </div> 
+        </li>
+    
 <div class="main">
   <div class="chart-container">
     <div id="chart1" class="chart"></div>
@@ -30,104 +33,98 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script>
     var gaugeData = [
-    ['EC', parseInt(50)],
-    ['TDS', parseInt(2)],
-    ['Turbidity', parseInt(15362)],
-    ['pH', parseInt(9856)],
-    ['Temp', parseInt(40)],
-    ['Humidity', parseInt(4)]
-  ];
+  ['EC', 36.9],
+  ['pH', 8.71],
+  ['Turbidity', 20.34],
+  ['TDS', 0],
+  ['Temp', 0.04],
+  ['Humidity', 0]
+];
 
-  var chartColors = ['#60B044', '#F6C600', '#F97600', '#FF0000', '#9C27B0', '#03A9F4'];
+var chartColors = ['#60B044', '#F6C600', '#F97600', '#FF0000', '#9C27B0', '#03A9F4'];
 
-  gaugeData.forEach(function(item, index) {
-    var chart = c3.generate({
-      bindto: '#chart' + (index + 1),
-      data: {
-        columns: [
-          ['', item[1]]
-        ],
-        type: 'gauge'
-      },
-      gauge: {
-        label: {
-          format: function(value, ratio) {
-            return item[0] + ': ' + value;
-          }
-        },
-        min: 0,
-        max: 200,
-        width: 15,
-        units: ''
-      },
-      color: {
-        pattern: [chartColors[index]]
-      }
-    });
-  });
+var gaugeOptions = [
+  { min: 0, max: 100},
+  { min: 0, max: 14 },
+  { min: 0, max: 25000 },
+  { min: 0, max: 1500 },
+  { min: 0, max: 5 },
+  { min: 0, max: 100 }
+];
 
-  var lineChart = new Chart(document.getElementById('line-chart').getContext('2d'), {
-    type: 'line',
+gaugeData.forEach(function(item, index) {
+  var chart = c3.generate({
+    bindto: '#chart' + (index + 1),
     data: {
-      labels: ['EC', 'TDS', 'Turbidity', 'pH', 'Temp'],
-      datasets: [
-        {
-          label: 'Reading',
-          data: [50, 2, 15362, 9856, 40],
-          backgroundColor: [
-            chartColors[0], // EC
-            chartColors[1], // TDS
-            chartColors[2], // Turbidity
-            chartColors[3], // pH
-            chartColors[4]  // Temp
-          ],
-          borderColor: [
-            chartColors[0], // EC
-            chartColors[1], // TDS
-            chartColors[2], // Turbidity
-            chartColors[3], // pH
-            chartColors[4]  // Temp
-          ],
-          borderWidth: 2,
-          pointBackgroundColor: '#fff',
-          pointBorderColor: [
-            chartColors[0], // EC
-            chartColors[1], // TDS
-            chartColors[2], // Turbidity
-            chartColors[3], // pH
-            chartColors[4]  // Temp
-          ],
-          pointRadius: 4,
-          pointHoverRadius: 6,
-          pointHitRadius: 8,
-          pointBorderWidth: 2
-        }
-      ]
+      columns: [
+        ['', item[1]]
+      ],
+      type: 'gauge'
     },
-    options: {
-      legend: {
-        position: 'bottom'
+    gauge: {
+      label: {
+        format: function(value, ratio) {
+          return item[0] + ': ' + value;
+        }
       },
-      scales: {
-        xAxes: [
-          {
-            ticks: {
-              autoSkip: false,
-              maxRotation: 0,
-              minRotation: 0
-            }
-          }
-        ],
-        yAxes: [
-          {
-            ticks: {
-              beginAtZero: true
-            }
-          }
-        ]
-      }
+      min: gaugeOptions[index].min,
+      max: gaugeOptions[index].max,
+      width: 15,
+      units: ''
+    },
+    color: {
+      pattern: [chartColors[index]]
     }
   });
+});
+
+var lineChart = new Chart(document.getElementById('line-chart').getContext('2d'), {
+  type: 'line',
+  data: {
+    labels: ['EC', 'pH', 'Turbidity', 'TDS', 'Temp', 'Humidity'],
+    datasets: [
+      {
+        label: 'Reading',
+        data: [36.94, 8.71, 20.34, 0, 0.04, 0],
+        backgroundColor: chartColors,
+        borderColor: chartColors,
+        borderWidth: 2,
+        pointBackgroundColor: '#fff',
+        pointBorderColor: chartColors,
+        pointRadius: 4,
+        pointHoverRadius: 6,
+        pointHitRadius: 8,
+        pointBorderWidth: 2
+      }
+    ]
+  },
+  options: {
+    legend: {
+      display: false
+    },
+    scales: {
+      xAxes: [
+        {
+          ticks: {
+            autoSkip: false,
+            maxRotation: 0,
+            minRotation: 0
+          }
+        }
+      ],
+      yAxes: [
+        {
+          ticks: {
+            beginAtZero: true,
+            max: 100
+          }
+        }
+      ]
+    }
+  }
+});
+
+
 
 </script>
         
