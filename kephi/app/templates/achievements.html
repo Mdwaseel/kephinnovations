@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>KEPHI INNOVATIONS</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+
+
+    <link rel="stylesheet" href="/app/static/style.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <!--Navigation-->
+    <nav>
+        <img src="/app/static/images/logo.png" alt="">
+        <div class="navigation">
+            <ul>
+                <i id="menu-close" class="fas fa-times"></i>
+                <li> <a href="/">Home</a></li>
+                <li> <a href="/about">About</a></li>
+                <li> <a class="active" href="/achievements">Achievements</a></li>
+                <li> <a href="/products">Products</a></li>
+                <li> <a href="/contact">Contact</a></li>
+            </ul>
+            <img id="menu-btn" src="images/menuu.png" alt="">
+        </div>
+    </nav>
+    <!---HOME-->
+    <section id="Home-about">
+        <h2>ACHIEVEMENTS-TLL DATE</h2>
+    </section>
+    <section id="ach-container">
+        <div class="ach">
+            <div class="post">
+                <img src="/app/static/images/robo1.jpeg" alt="">
+                <h3>ROBOTHON-2021</h3>
+                <P>Won cash award and title of Best Expo Project at Military College Of Electronics and Mechanical
+                    Engineering (MCEME)'s Robothon Contest 2021, Felicitated by the Governor of Telangana, Dr. Tamilisai
+                    Soundararajan</P>
+                <a href="/app/achievements/robo">Read More</a>
+            </div>
+            <div class="post">
+                <img src="/app/static/images/xprize1.png" alt="">
+                <h3>XPRIZE</h3>
+                <P>Mitigating climate change requires collective action. We’re proud to be one of 1,133 teams 
+                    as a qualified competitor signed up for the $100M XPRIZE Carbon Removal to create real solutions.</P>
+                <a href="/achievements/robo">Read More</a>
+            </div>
+            <div class="post">
+                <img src="/app/static/images/cisco1.jpeg" alt="">
+                <h3>CISCO-GPSC</h3>
+                <P>Team Helix of HITAM (META-Centre For Ponics) were Semifinalists (among top 94 out of 1200 from accross 
+                    the world) in "CISCO Global Problem Solver Challenge" for AQUA-REFORMER,A novel methodology to improve 
+                    traditional Aqua-Farming using Emerging-Technologies.</P>
+                <a href="/achievements/robo">Read More</a>
+            </div>
+            <div class="post">
+                <img src="/app/static/images/a1.jpeg" alt="">
+                <h3>SAMSUNG-SFT</h3>
+                <P>Samsung India today announced top 50 teams in its Gen-Z education and innovation competition 'Solve for Tomorrow'. 
+                    The youth competition, which is running for the first time in India, has seen teams from across the country respond 
+                    and submit ideas to help tackle problems that India faces in the areas of education, environment, healthcare and agriculture.</P>
+                <a href="/achievements/robo">Read More</a>
+            </div>
+            <div class="post">
+                <img src="/app/static/images/a2.jpeg" alt="">
+                <h3>AMRUT 2.0</h3>
+                <P>KEPHI INNOVATIONS form HITAM Innovation and Incubation Centre(HIIC) was the one of the 100 start-ups 
+                    across the country to receive a Grant of 20Lakhs to implement and demonstrate our solution AQUA-REFORMER at Warangal</P>
+                <a href="/achievements/robo">Read More</a>
+            </div>
+        </div>
+
+        <div class="cate">
+            <h2>ACHIEVEMENTS</h2>
+            <hr>
+            <a href="#">ROBOTHON-2021</a>
+            <hr>
+            <a href="#">XPRIZE</a>
+            <hr>
+            <a href="#">CISCO-GPSC</a>
+            <hr>
+            <a href="#">AMRUT 2.0</a>
+            <hr>
+            <a href="#">SAMSUNG-Slove for tommorrow</a>
+            <hr>
+        </div>
+    </section>
+
+
+    <footer>
+
+        <div class="copyright">
+            <p>© 2022 KEPHI INNOVATIONS, Inc.</p>
+            <div class="pro-links">
+                <i class="fab fa-facebook-f"></i>
+                <a href="https://instagram.com/hitam_team.carboxy?igshid=YmMyMTA2M2Y="><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/kephi-innovations-pvt-ltd/"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        $('#menu-btn').click(function () {
+            $('nav .navigation ul').addClass('active')
+        });
+
+        $('#menu-close').click(function () {
+            $('nav .navigation ul').removeClass('active')
+        });
+    </script>
+
+
+</body>
+
+
+</html>
